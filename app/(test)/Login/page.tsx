@@ -52,11 +52,10 @@ export default function Page() {
     setLoading(true);
     webAuth.login(
       {
-        sso: false,
         realm: "Username-Password-Authentication",
         username: username,
         password: password,
-        email: 1, // placeholder, email isnt needed to sign in but needs to exist
+        email: "1", // placeholder, email isnt needed to sign in but needs to exist
         responseType: 'id_token',
         onRedirecting: function (done) {
           console.log("Loggin in...")
@@ -67,7 +66,7 @@ export default function Page() {
         setLoading(false);
         if (err) {
           console.log(err);
-          return alert("Something went wrong: " + err.message);
+          return alert("Something went wrong: " + err);
         }
         return alert("Login successful");
       }
@@ -79,7 +78,7 @@ export default function Page() {
       <h1 className="text-7xl font-semibold tracking-tight">Welcome!</h1>
       <blockquote className="mt-6 border-l-2 pl-6 italic flex-col justify-center">
         {/* "{quote}" */}
-        'insert quote here'
+        &apos;insert quote here&apos;
       </blockquote>
       <Separator />
       <Label htmlFor="ps1">Please Enter Your Login Information</Label>

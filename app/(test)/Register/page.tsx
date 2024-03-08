@@ -45,13 +45,11 @@ export default function Page() {
     // Call Auth0 signup function
     webAuth.signup(
       {
-        sso: false,
-        auto_login: true,
         connection: "Username-Password-Authentication",
         username: username,
         password: password,
         email: email,
-        user_metadata: {
+        userMetadata: {
           firstName: firstName,
           lastName: lastName,
           username: username,
@@ -61,7 +59,7 @@ export default function Page() {
       function (err) {
         setLoading(false);
         if (err) {
-          return alert("Something went wrong: " + err.message);
+          return alert("Something went wrong: " + err);
         }
         return alert("success signup without login!");
       }
@@ -73,7 +71,7 @@ export default function Page() {
       <h1 className="text-7xl font-semibold tracking-tight">Welcome!</h1>
       <blockquote className="mt-6 border-l-2 pl-6 italic flex-col justify-center">
         {/* "{quote}" */}
-        'insert quote here'
+        &apos;insert quote here&apos;
       </blockquote>
       <Separator />
       <Label htmlFor="ps1">Please Enter Your Login Information</Label>
