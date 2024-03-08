@@ -1,0 +1,5 @@
+var AUTH0_DOMAIN = 'dev-4bxq5yfra3fmyi5j.us.auth0.com';
+var AUTH0_CLIENT_ID = 'KmR4ylpJ9eaYT3HrWMoBWgmfL7p3ZTIp';
+var AUTH0_DB_CONNECTION_NAME = 'Custom-Signup-Example-DB';
+
+export {AUTH0_DOMAIN,AUTH0_CLIENT_ID,AUTH0_DB_CONNECTION_NAME}
